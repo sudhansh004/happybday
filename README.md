@@ -22,7 +22,7 @@ The sketch also uses shiftDisplay() function to control two RGB LEDs using a shi
   connncected to 2 RGB LEDs thus they glow in different colours with the music (only 4 outputs i used because of lack of wires :) ).
 - I have added a capacitor of 1micro Farads to smooth out the sound of buzzer, you can use even smaller value like 0.1 micro Farads just connect the capacitor parallely to the buzzer. The output of the PWM pin is a square wave and the capacitor makes the transitions curved avoiding abrubt changes in voltage across the       buzzer making it sound smoother.
 - Resistors of 220 ohms are used along with the leds to limit current and avoid damage.
-  Refer to the circuit diagram for pin connections.
+Refer to the circuit diagram for pin connections.
 
 
 Play around with the code as you want to and have fun!!
