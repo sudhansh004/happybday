@@ -2,7 +2,7 @@
 # Happy Birthday on Arduino 🎂
 
 
-This small project demonstrates how to play the "Happy Birthday" tune using an Arduino and a passive buzzer, and a little fun display of colorful LEDs. It's a fun and simple way to explore Arduino's tone generation capabilities!
+This small project demonstrates how to play the "Happy Birthday" tune using an Arduino and a passive buzzer, and a little fun display of colorful LEDs. It's a fun and simple way to explore Arduino's tone generation capabilities!.
 
 ## Components Used
 
@@ -23,10 +23,12 @@ The sketch also uses shiftDisplay() function to control two RGB LEDs using a shi
 
 - The circuit is quite simple the buzzer can be connected to any PWM output pin of the arduino along with ground.
 - The shift register is capable of driving 8 outputs at once by taking an 8 bit binary number as an input and shifting the bits with every iteration, the outputs are connected to 2 RGB LEDs thus they glow in different colours with the music (only 4 outputs i used because of lack of wires :) ). The binary number can be changed to create a different pattern.
-- Have added a capacitor of 1micro Farads to smooth out the sound of buzzer, you can use even smaller value like 0.1 micro Farads just connect the capacitor parallelly to the buzzer. The output of the PWM pin is a square wave and the capacitor makes the transitions curved avoiding abrupt changes in voltage across the buzzer making it sound smoother.
+- Have added a capacitor of 1micro Farads to smooth out the sound of buzzer, just connect the capacitor parallelly to the buzzer. The output of the PWM pin is a square wave and the capacitor makes the transitions curved avoiding abrupt changes in voltage across the buzzer making it sound smoother.
 - Resistors of 220 ohms are used along with the leds to limit current and avoid damage. 
 Refer to the circuit diagram for pin connections.
 
+**Note** : some tones seem missing from the music, it may be because of the 1uF capacitor I used in the circuit (i didn't had one with a smaller value), along with smoothing the sound it also introduces a low pass filter in the circuit with a time constant RC = 110 uS and thus it dosen't let sounds of frequencies higher than 1.4kHz pass through the circuit and makes the music sound a bit different, you can try using smaller values of capacitor to make it better. 
 
 
-Play around with the code as you want to and have fun!!
+
+Play around with the code as you want and you can always use this to surprise your friends!
